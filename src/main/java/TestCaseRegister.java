@@ -1,18 +1,25 @@
-import Model.User;
-import Page.RegisterPage;
+import model.User;
+import org.testng.annotations.Test;
+import page.RegisterPage;
 
 public class TestCaseRegister {
-    public static void main(String[] args){
+    @Test
+    public void main(){
         RegisterPage rp = new RegisterPage();
+        User user = getTestUser();
+        rp.register(user);
+    }
+
+    private static User getTestUser(){
         User user = new User();
         user.setFullName("do dang phat");
-        user.setPhoneNumber("0913427279");
-        user.setEmail("toi@gmail.com");
+        user.setPhoneNumber("0913427296");
+        user.setEmail("toiiiiiiiiiiiiiiiiii@gmail.com");
         user.setNewPassword("1234567");
         user.setConfirmPassword("1234567");
-        user.setUserName("toi@gmail.com");
+        user.setUserName("toiiiiiiiiiiiiiiiiii@gmail.com");
         user.setPassword("1234567");
         user.setSearch("bot giat");
-        rp.runRegister(user);
+        return user;
     }
 }
