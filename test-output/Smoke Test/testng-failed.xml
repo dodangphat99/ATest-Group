@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [Smoke Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="LAZADA smoke test(failed)">
+    <parameter name="recordVideo" value="false"/>
+    <classes>
+      <class name="TestCaseRegister">
+        <methods>
+          <include name="main"/>
+        </methods>
+      </class> <!-- TestCaseRegister -->
+    </classes>
+  </test> <!-- LAZADA smoke test(failed) -->
+</suite> <!-- Failed suite [Smoke Test] -->
