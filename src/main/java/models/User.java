@@ -17,6 +17,7 @@ public class User {
     String newPassword;
     String confirmPassword;
     String userName;
+    String search;
 
     @Override
     public String toString() {
@@ -32,6 +33,4 @@ public class User {
                 ", search='" + search + '\'' +
                 '}';
     }
-
-    String search;
 }
