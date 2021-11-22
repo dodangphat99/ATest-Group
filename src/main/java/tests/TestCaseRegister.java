@@ -1,12 +1,28 @@
-import org.testng.annotations.Test;
-import pages.RegisterPage;
+package tests;
 
-public class TestCaseRegister {
+import org.testng.annotations.Test;
+import pages.*;
+
+public class TestCaseRegister extends BasePage {
+
     @Test
     public void main(){
+        HomePage hp = new HomePage();
         RegisterPage rp = new RegisterPage();
-//        User user = getTestUser();
+        LoginPage lp = new LoginPage();
+        CartPage cp = new CartPage();
+        SearchPage sp = new SearchPage();
+        ProductPage pp = new ProductPage();
+
+        hp.clickRegister();
         rp.register();
+        lp.login();
+        hp.clickCart();
+        cp.clickKeepBuyProduct();
+        sp.search();
+        pp.clickBuyProduct();
+        cp.clickContinueBuyButton();
+        pp.clickCartButton();
     }
 
 //    private static User getTestUser(){
