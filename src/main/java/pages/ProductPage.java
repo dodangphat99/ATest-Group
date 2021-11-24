@@ -12,7 +12,6 @@ public class ProductPage extends BasePage {
 
     public void clickBuyProduct(){
         driver.findElement(productButton).click();
-        ExtentTest logger = extent.createTest("BuyProductTest");
         logger.log(Status.INFO,"Buy Product Test");
         if(driver.getCurrentUrl().equals("https://fumart.vn/tim-kiem?q=bot%20giat")){
             logger.log(Status.PASS,"Buy Product Successfully");
@@ -24,7 +23,6 @@ public class ProductPage extends BasePage {
     public void clickCartButton(){
         waitForElementDisAppear(driver,spinner);
         driver.findElement(cartButton).click();
-        ExtentTest logger = extent.createTest("CartButtonTest");
         logger.log(Status.INFO,"Cart Button Test");
         if(driver.getCurrentUrl().equals("https://fumart.vn/cart")){
             logger.log(Status.PASS,"Cart Button Successfully");

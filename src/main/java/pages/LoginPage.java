@@ -18,13 +18,10 @@ public class LoginPage extends BasePage{
     private By fieldPassword = By.xpath("//*[@id=\"main-layout\"]/section/div[2]/div/div/div/div/form/div[2]/input");
     private By loginButton = By.xpath("//*[@id=\"main-layout\"]/section/div[2]/div/div/div/div/form/div[3]/button");
 
-    public void login(){
-        JsonHelper jh = new JsonHelper();
-        jh.JsonUser();
-        driver.findElement(fieldUserName).sendKeys(jh.getUsers().get(0).getUserName());
-        driver.findElement(fieldPassword).sendKeys(jh.getUsers().get(0).getPassword());
+    public void login(User user){
+        driver.findElement(fieldUserName).sendKeys(user.getUserName());
+        driver.findElement(fieldPassword).sendKeys(user.getPassword());
         driver.findElement(loginButton).click();
-        ExtentTest logger = extent.createTest("LoginTest");
         logger.log(Status.INFO,"Login Test");
         if(driver.getCurrentUrl().equals("https://fumart.vn/login")){
             logger.log(Status.PASS,"Login Successfully");
