@@ -16,7 +16,6 @@ public class HomePage extends BasePage {
     public void clickRegister(){
         driver.findElement(confirm).click();
         driver.findElement(createAccount).click();
-        ExtentTest logger = extent.createTest("SwitchToRegisterTest");
         logger.log(Status.INFO,"Switch To Register to Fumart");
         if(driver.getCurrentUrl().equals("https://fumart.vn/register")){
             logger.log(Status.PASS,"Switch To Register Successfully");
@@ -28,7 +27,6 @@ public class HomePage extends BasePage {
     public void clickCart(){
         waitForElementDisAppear(driver,imageSlide);
         driver.findElement(cartButton).click();
-        ExtentTest logger = extent.createTest("CartTest");
         logger.log(Status.INFO,"Switch to Cart Screen");
         if(driver.getCurrentUrl().equals("https://fumart.vn/cart")){
             logger.log(Status.PASS,"Switch to Cart Screen Successfully");

@@ -3,6 +3,7 @@ package pages;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 import helpers.JsonHelper;
+import models.User;
 import org.openqa.selenium.By;
 
 public class RegisterPage extends BasePage {
@@ -14,17 +15,14 @@ public class RegisterPage extends BasePage {
     private By confirmAcceptButton = By.xpath("//*[@id='app-wrapper']/main/section/div[2]/div/div/div/form/div/div[7]/label/span[1]");
     private By createAccountButton = By.xpath("//*[@id='app-wrapper']/main/section/div[2]/div/div/div/form/div/div[8]/div/button");
 
-    public void register(){
-        JsonHelper jh = new JsonHelper();
-        jh.JsonUser();
-        driver.findElement(fieldFullName).sendKeys(jh.getUsers().get(0).getFullName());
-        driver.findElement(fieldPhoneNumber).sendKeys(jh.getUsers().get(0).getPhoneNumber());
-        driver.findElement(fieldEmail).sendKeys(jh.getUsers().get(0).getEmail());
-        driver.findElement(fieldNewPassword).sendKeys(jh.getUsers().get(0).getNewPassword());
-        driver.findElement(fieldConfirmPassword).sendKeys(jh.getUsers().get(0).getConfirmPassword());
+    public void register(User user){
+        driver.findElement(fieldFullName).sendKeys(user.getFullName());
+        driver.findElement(fieldPhoneNumber).sendKeys(user.getPhoneNumber());
+        driver.findElement(fieldEmail).sendKeys(user.getEmail());
+        driver.findElement(fieldNewPassword).sendKeys(user.getNewPassword());
+        driver.findElement(fieldConfirmPassword).sendKeys(user.getConfirmPassword());
         driver.findElement(confirmAcceptButton).click();
         driver.findElement(createAccountButton).click();
-        ExtentTest logger = extent.createTest("RegisterTest");
         logger.log(Status.INFO,"Register Test");
         if(driver.getCurrentUrl().equals("https://fumart.vn/register")){
             logger.log(Status.PASS,"Register Successfully");
