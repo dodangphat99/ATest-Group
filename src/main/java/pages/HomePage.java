@@ -8,30 +8,18 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class HomePage extends BasePage {
-    private By confirm = By.xpath("//*[@id='select-store-modal___BV_modal_body_']/div/div/button");
-    private By createAccount = By.xpath("//*[@id='app-wrapper']/header/div[1]/div/div/div/div[1]/a");
+    private By confirm = By.xpath("//button[@type='button' and @class='btn btn-primary']");
+    private By createAccount = By.xpath("//a[@class='ml-3 text-light']");
     private By imageSlide = By.xpath("//*[@id=\"__BVID__180\"]/img");
-    private By cartButton = By.xpath("//*[@id=\"app-wrapper\"]/header/div[1]/div/div/div/div[2]/div[2]/a");
+    private By cartButton = By.xpath("//div[@class=\"flex-fill\"]/div[2]/div[2]/a[@href='/cart']");
 
     public void clickRegister(){
         driver.findElement(confirm).click();
         driver.findElement(createAccount).click();
-        logger.log(Status.INFO,"Switch To Register to Fumart");
-        if(driver.getCurrentUrl().equals("https://fumart.vn/register")){
-            logger.log(Status.PASS,"Switch To Register Successfully");
-        } else {
-            logger.log(Status.FAIL,"Switch To Register Failed");
-        }
     }
 
     public void clickCart(){
         waitForElementDisAppear(driver,imageSlide);
         driver.findElement(cartButton).click();
-        logger.log(Status.INFO,"Switch to Cart Screen");
-        if(driver.getCurrentUrl().equals("https://fumart.vn/cart")){
-            logger.log(Status.PASS,"Switch to Cart Screen Successfully");
-        } else {
-            logger.log(Status.FAIL,"Switch to Cart Screen Failed");
-        }
     }
 }

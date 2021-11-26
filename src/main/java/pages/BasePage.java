@@ -2,6 +2,7 @@ package pages;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.utils.FileUtil;
@@ -37,7 +38,7 @@ public class BasePage extends RegisterHelper {
     public static AbstractAssertion aa;
 
     @BeforeTest
-    public static void before(){
+    public static void before() throws IOException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.navigate().to("https://fumart.vn/");
@@ -47,6 +48,7 @@ public class BasePage extends RegisterHelper {
         extent.attachReporter(reporter);
         aa = new AbstractAssertion();
         logger = extent.createTest("RegisterTest");
+//        logger.fail("Screenshot", MediaEntityBuilder.createScreenCaptureFromPath(captureScreen()).build());
     }
 
     public void waitForElementAppear(WebDriver drive, By locator){
@@ -62,7 +64,7 @@ public class BasePage extends RegisterHelper {
     public static String captureScreen(){
         TakesScreenshot ts = (TakesScreenshot) driver;
         File src = ts.getScreenshotAs(OutputType.FILE);
-        String destination = "C:\\Users\\PC\\Downloads\\"+getCurrentDateAndTime()+".png";
+        String destination = "C:\\Users\\PC\\IdeaProjects\\Test\\Reports\\"+getCurrentDateAndTime()+".png";
         File finalDestination = new File(destination);
 
         try{
@@ -71,7 +73,7 @@ public class BasePage extends RegisterHelper {
             System.out.print("Capture Failed "+e.getMessage());
         }
 
-        return destination;
+        return destination.substring(38);
     }
 
     public static String getCurrentDateAndTime(){
@@ -88,6 +90,14 @@ public class BasePage extends RegisterHelper {
         return str;
     }
 
+//    public static void logTestReport(String info,String url,String pass, String fail){
+//        logger.log(Status.INFO,info);
+//        if(driver.getCurrentUrl().equals(url)){
+//            logger.log(Status.PASS,pass);
+//        } else {
+//            logger.log(Status.FAIL,fail);
+//        }
+//    }
 
     @AfterTest
     public void afterTest(){
