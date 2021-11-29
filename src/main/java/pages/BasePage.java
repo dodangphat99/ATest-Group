@@ -43,7 +43,7 @@ public class BasePage extends RegisterHelper {
         driver = new ChromeDriver();
         driver.navigate().to("https://fumart.vn/");
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        reporter = new ExtentHtmlReporter("C:\\Users\\PC\\IdeaProjects\\Test\\Reports\\report.html");
+        reporter = new ExtentHtmlReporter("C:\\Users\\PC\\IdeaProjects\\Test\\Reports\\report1.html");
         extent = new ExtentReports();
         extent.attachReporter(reporter);
         aa = new AbstractAssertion();

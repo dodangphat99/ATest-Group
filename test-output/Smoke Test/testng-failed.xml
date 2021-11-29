@@ -4,13 +4,13 @@
   <test thread-count="2" parallel="classes" name="LAZADA smoke test(failed)">
     <parameter name="recordVideo" value="false"/>
     <classes>
-      <class name="tests.TestCaseRegister">
+      <class name="tests.TestCaseDeleteAllProducts">
         <methods>
-          <include name="main"/>
           <include name="afterTest"/>
+          <include name="main"/>
           <include name="before"/>
         </methods>
-      </class> <!-- tests.TestCaseRegister -->
+      </class> <!-- tests.TestCaseDeleteAllProducts -->
     </classes>
   </test> <!-- LAZADA smoke test(failed) -->
 </suite> <!-- Failed suite [Smoke Test] -->

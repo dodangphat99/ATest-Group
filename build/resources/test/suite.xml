@@ -7,7 +7,7 @@
     <test name="LAZADA smoke test">
         <parameter name="recordVideo" value="false"/>
         <classes>
-            <class name="tests.TestCaseRegister"/>
+            <class name="tests.TestCaseDeleteAllProducts"/>
         </classes>
     </test>
 </suite>

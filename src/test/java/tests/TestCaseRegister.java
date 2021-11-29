@@ -59,8 +59,8 @@ public class TestCaseRegister extends BasePage {
     }
 
     private static User getTestUserLogin(){
-
         User user = new User();
+        jh.JsonUser();
         user.setUserName(jh.getUsers().get(0).getUserName());
         user.setPassword(jh.getUsers().get(0).getPassword());
         user.setSearch(jh.getUsers().get(0).getSearch());
