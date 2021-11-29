@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" parallel="classes" name="Failed suite [Smoke Test]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="LAZADA smoke test(failed)">
+    <parameter name="recordVideo" value="false"/>
     <classes>
-      <class name="tests.TestCaseRegister">
+      <class name="tests.TestCaseDeleteAllProducts">
         <methods>
-          <include name="main"/>
           <include name="afterTest"/>
-          <include name="captureScreen"/>
+          <include name="main"/>
           <include name="before"/>
         </methods>
-      </class> <!-- tests.TestCaseRegister -->
+      </class> <!-- tests.TestCaseDeleteAllProducts -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Default Suite] -->
+  </test> <!-- LAZADA smoke test(failed) -->
+</suite> <!-- Failed suite [Smoke Test] -->

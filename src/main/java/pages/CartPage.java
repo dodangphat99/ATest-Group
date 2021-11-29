@@ -11,7 +11,13 @@ import java.io.IOException;
 
 public class CartPage extends BasePage {
     private By keepBuyingButton = By.xpath("//div[@class=\"text-right\"]/button");
+    private By deleteButton = By.xpath("//div[@class=\"text-right\"]/button[2]");
+    private By spinner = By.xpath("//*[@class=\"spinner\"]");
 //    private By continueBuyButton = By.xpath("//*[@id=\"main-layout\"]/section/div[2]/div/div[1]/div[2]/button[1]");
+    private By paymentButton = By.xpath("//div[@class='row']/div[2]/div/div/button[@class='btn btn-primary w-100 mt-4']");
+    private By backButton = By.xpath("//div[@class='mt-5 d-flex']/a");
+    private By modal = By.xpath("//div[@id='vueConfirm']/div/span/p");
+    private By acceptButton = By.xpath("//div[@id='vueConfirm']/div/div/button[@class='vc-btn']");
 
     public void clickKeepBuyProduct(){
         waitForElementAppear(driver, keepBuyingButton);
@@ -30,5 +36,21 @@ public class CartPage extends BasePage {
 
     public void clickContinueBuyButton(){
         driver.findElement(keepBuyingButton).click();
+    }
+
+    public void clickPaymentButton(){
+        driver.findElement(paymentButton).click();
+    }
+
+    public void clickBackButton(){
+        waitForElementDisAppear(driver,spinner);
+        driver.findElement(backButton).click();
+    }
+
+    public void clickDeleteAllProducts(){
+        driver.findElement(deleteButton).click();
+        waitForElementAppear(driver,modal);
+        driver.findElement(acceptButton).click();
+        waitForElementDisAppear(driver,spinner);
     }
 }
