@@ -1,15 +1,19 @@
 package tests;
 
 import com.aventstack.extentreports.Status;
+import commons.GlobalVariable;
 import helpers.JsonHelper;
+import helpers.ReportHelper;
 import models.User;
 import org.testng.annotations.Test;
 import pages.*;
+import reports.HtmlLog;
 import reports.SoftAssertion;
+import reports.TestCamera;
 
 import java.io.IOException;
 
-public class TestCaseRegister extends BasePage {
+public class TestCaseRegister extends BaseTest {
     private static HomePage hp = new HomePage();
     private static RegisterPage rp = new RegisterPage();
     private static LoginPage lp = new LoginPage();
@@ -19,30 +23,38 @@ public class TestCaseRegister extends BasePage {
     private static JsonHelper jh = new JsonHelper();
 
     @Test
-    public void main() {
-        logger.log(Status.INFO,"Switch To Register to Fumart");
+    public void testCaseRegister() throws IOException {
+        HtmlLog.stepInfo("Switch To Register to Fumart");
         hp.clickRegister();
         SoftAssertion.assertEqual("https://fumart.vn/register","Switch To Register Successfully","Switch To Register Failed");
-        logger.log(Status.INFO,"Register Test");
+        HtmlLog.stepInfo("Register Test");
         rp.register(getTestUserRegister());
         SoftAssertion.assertEqual("https://fumart.vn/login","Register Successfully","Register Failed");
-        logger.log(Status.INFO,"Login Test");
+        HtmlLog.stepInfo("Login Test");
         lp.login(getTestUserLogin());
         SoftAssertion.assertEqual("https://fumart.vn/","Login Successfully","Login Failed");
-        logger.log(Status.INFO,"Switch to Cart Screen");
+        HtmlLog.stepInfo("Switch to Cart Screen");
         hp.clickCart();
         SoftAssertion.assertEqual("https://fumart.vn/cart","Switch to Cart Screen Successfully","Switch to Cart Screen Failed");
+        HtmlLog.stepInfo("Keep Buy Product Test");
         cp.clickKeepBuyProduct();
-        logger.log(Status.INFO,"Search Test");
+        //SoftAssertion.assertEqual("https://fumart.vn/san-pham","Keep Buy Product Successfully","Keep Buy Product Failed");
+
+        String failClickKeepBuyProduct = "Failed" + SoftAssertion.formatFailMessage("abc","xyz")
+                +"&emsp;&emsp;&emsp;&emsp;"
+                +GlobalVariable.getLogger().addScreenCaptureFromPath(TestCamera.captureScreen());
+        ReportHelper.logFail(failClickKeepBuyProduct);
+
+        HtmlLog.stepInfo("Search Test");
         sp.search(getTestUserSearch());
         SoftAssertion.assertEqual("https://fumart.vn/tim-kiem?q=bot%20giat","Search Successfully","Search Failed");
-        logger.log(Status.INFO,"Buy Product Test");
+        HtmlLog.stepInfo("Buy Product Test");
         pp.clickBuyProduct();
         SoftAssertion.assertEqual("https://fumart.vn/cart","Buy Product Successfully","Buy Product Failed");
-        logger.log(Status.INFO,"Continue Buy Product Test");
+        HtmlLog.stepInfo("Continue Buy Product Test");
         cp.clickContinueBuyButton();
         SoftAssertion.assertEqual("https://fumart.vn/san-pham","Continue Buy Product Successfully","Continue Buy Product Failed");
-        logger.log(Status.INFO,"Cart Button Test");
+        HtmlLog.stepInfo("Cart Button Test");
         pp.clickCartButton();
         SoftAssertion.assertEqual("https://fumart.vn/cart","Cart Button Successfully","Cart Button Failed");
     }

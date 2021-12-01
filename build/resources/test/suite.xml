@@ -3,11 +3,17 @@
 <!--<suite name="Smoke Test" thread-count="2" parallel="tests">-->
 <suite name="Smoke Test" thread-count="2" parallel="classes">
     <listeners>
+<!--        <listener class-name="listeners.BaseTestListener"></listener>-->
     </listeners>
     <test name="LAZADA smoke test">
         <parameter name="recordVideo" value="false"/>
+        <parameter name="environment" value="staging"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="tests.TestCaseDeleteAllProducts"/>
+<!--            <class name="tests.TestCaseRegister"/>-->
+<!--            <class name="tests.TestCaseDeleteAllProducts"/>-->
+<!--            <class name="tests.DemoSeleniumGrid"/>-->
+            <class name="tests.DemoSauceLabs"/>
         </classes>
     </test>
 </suite>
