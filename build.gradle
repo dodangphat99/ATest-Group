@@ -34,7 +34,6 @@ dependencies {
     // https://mvnrepository.com/artifact/com.aventstack/extentreports
     implementation group: 'com.aventstack', name: 'extentreports', version: '3.1.5'
 
-
 }
 
 test {

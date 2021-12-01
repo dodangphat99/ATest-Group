@@ -2,15 +2,17 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" parallel="classes" name="Failed suite [Smoke Test]" guice-stage="DEVELOPMENT">
   <test thread-count="2" parallel="classes" name="LAZADA smoke test(failed)">
+    <parameter name="environment" value="staging"/>
+    <parameter name="browser" value="chrome"/>
     <parameter name="recordVideo" value="false"/>
     <classes>
-      <class name="tests.TestCaseDeleteAllProducts">
+      <class name="tests.DemoSauceLabs">
         <methods>
-          <include name="afterTest"/>
+          <include name="exit"/>
+          <include name="setUp"/>
           <include name="main"/>
-          <include name="before"/>
         </methods>
-      </class> <!-- tests.TestCaseDeleteAllProducts -->
+      </class> <!-- tests.DemoSauceLabs -->
     </classes>
   </test> <!-- LAZADA smoke test(failed) -->
 </suite> <!-- Failed suite [Smoke Test] -->
