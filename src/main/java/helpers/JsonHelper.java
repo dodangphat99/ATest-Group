@@ -21,23 +21,11 @@ import lombok.Setter;
 
 public class JsonHelper {
     private String link = "C:\\Users\\PC\\IdeaProjects\\Test\\src\\main\\resources\\User.json";
-    private String linkLogin = "C:\\Users\\PC\\IdeaProjects\\Test\\src\\main\\resources\\UserLogin.json";
     List<User> users = null;
 
     public void JsonUser(){
         try {
             Reader reader = Files.newBufferedReader(Paths.get(link));
-            users = new Gson().fromJson(reader, new TypeToken<List<User>>() {}.getType());
-//            users.forEach(System.out::println);
-            reader.close();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-    }
-
-    public void JsonUserLogin(){
-        try {
-            Reader reader = Files.newBufferedReader(Paths.get(linkLogin));
             users = new Gson().fromJson(reader, new TypeToken<List<User>>() {}.getType());
 //            users.forEach(System.out::println);
             reader.close();

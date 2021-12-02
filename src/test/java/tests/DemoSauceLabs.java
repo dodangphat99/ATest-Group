@@ -1,5 +1,6 @@
 package tests;
 
+import commons.GlobalVariable;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
@@ -25,9 +26,8 @@ public class DemoSauceLabs {
     public static final String platformName = System.getProperty("platformName", "Windows 10");
     public static final String sauceUser = "oauth-khoaprotk190-813ab";
     public static final String sauceKey = "0342794a-94d9-4fa3-966f-87ee123939ee";
-    public static final String sauceUrl = "https://oauth-khoaprotk190-813ab:0342794a-94d9-4fa3-966f-87ee123939ee@ondemand.apac-southeast-1.saucelabs.com:443/wd/hub";
-
-    protected WebDriver driver;
+    public static final String sauceUrl = "https://oauth-thanhtngcd17200-3d846:cd009abb-df5d-4feb-a9ab-c1391b369a69@ondemand.us-west-1.saucelabs.com:443/wd/hub";
+    WebDriver driver;
 
     @BeforeMethod
     public void setUp() throws MalformedURLException {
@@ -37,16 +37,19 @@ public class DemoSauceLabs {
 //        capabilities.setCapability("browserVersion", browserVersion);
         capabilities.setCapability("platformName", platformName);
         driver = new RemoteWebDriver(new URL(sauceUrl), capabilities);
+        System.out.print("Start.");
     }
 
     @Test
     public void main() {
+        System.out.print("Run.");
         driver.navigate().to(baseUrl);
     }
 
     @AfterMethod
     public void exit() {
         driver.quit();
+        System.out.print("End.");
     }
 
 //    @BeforeMethod

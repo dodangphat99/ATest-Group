@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <!--<suite name="Smoke Test" thread-count="2" parallel="tests">-->
-<suite name="Smoke Test" thread-count="2" parallel="classes">
+<suite name="Smoke Test" thread-count="5" parallel="classes">
     <listeners>
-<!--        <listener class-name="listeners.BaseTestListener"></listener>-->
+        <listener class-name="listeners.BaseTestListener"></listener>
     </listeners>
     <test name="LAZADA smoke test">
         <parameter name="recordVideo" value="false"/>
         <parameter name="environment" value="staging"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-<!--            <class name="tests.TestCaseRegister"/>-->
-<!--            <class name="tests.TestCaseDeleteAllProducts"/>-->
+<!--            <class name="tests.TC1_TestCaseRegister"/>-->
+<!--            <class name="tests.TC2_TestCaseDeleteAllProducts"/>-->
 <!--            <class name="tests.DemoSeleniumGrid"/>-->
-            <class name="tests.DemoSauceLabs"/>
+<!--            <class name="tests.DemoSauceLabs"/>-->
+<!--            <class name="tests.TC3_TestCaseCorrectProducts"/>-->
+<!--            <class name="tests.TC4_TestCaseDeleteAddress"/>-->
+            <class name="tests.TC5_TestCaseChangeToEWalletPage"/>
         </classes>
     </test>
 </suite>

@@ -18,6 +18,7 @@ public class User {
     String confirmPassword;
     String userName;
     String search;
+    String address;
 
     @Override
     public String toString() {
@@ -31,6 +32,7 @@ public class User {
                 ", confirmPassword='" + confirmPassword + '\'' +
                 ", userName='" + userName + '\'' +
                 ", search='" + search + '\'' +
+                ", address='" + address + '\'' +
                 '}';
     }
 }

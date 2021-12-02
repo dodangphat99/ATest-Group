@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="classes" name="Failed suite [Smoke Test]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="classes" name="LAZADA smoke test(failed)">
+<suite parallel="classes" name="Failed suite [Smoke Test]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.BaseTestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="LAZADA smoke test(failed)">
     <parameter name="environment" value="staging"/>
     <parameter name="browser" value="chrome"/>
     <parameter name="recordVideo" value="false"/>
     <classes>
-      <class name="tests.DemoSauceLabs">
+      <class name="tests.TC5_TestCaseChangeToEWalletPage">
         <methods>
-          <include name="exit"/>
-          <include name="setUp"/>
-          <include name="main"/>
+          <include name="testCaseChangeToEWalletPage"/>
+          <include name="before"/>
         </methods>
-      </class> <!-- tests.DemoSauceLabs -->
+      </class> <!-- tests.TC5_TestCaseChangeToEWalletPage -->
     </classes>
   </test> <!-- LAZADA smoke test(failed) -->
 </suite> <!-- Failed suite [Smoke Test] -->

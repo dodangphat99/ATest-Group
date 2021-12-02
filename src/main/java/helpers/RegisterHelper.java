@@ -1,5 +1,5 @@
 package helpers;
 
 public class RegisterHelper {
-    public static final int ELEMENT_TIME_WAIT = 20;
+    public static final int ELEMENT_TIME_WAIT = 15;
 }
