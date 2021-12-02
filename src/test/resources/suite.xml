@@ -3,7 +3,7 @@
 <!--<suite name="Smoke Test" thread-count="2" parallel="tests">-->
 <suite name="Smoke Test" thread-count="5" parallel="classes">
     <listeners>
-        <listener class-name="listeners.BaseTestListener"></listener>
+<!--        <listener class-name="listeners.BaseTestListener"></listener>-->
     </listeners>
     <test name="LAZADA smoke test">
         <parameter name="recordVideo" value="false"/>
