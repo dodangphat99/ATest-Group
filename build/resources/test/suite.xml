@@ -10,12 +10,12 @@
         <parameter name="environment" value="staging"/>
         <parameter name="browser" value="chrome"/>
         <classes>
-<!--            <class name="tests.TC1_TestCaseRegister"/>-->
-<!--            <class name="tests.TC2_TestCaseDeleteAllProducts"/>-->
+            <class name="tests.TC1_TestCaseRegister"/>
+            <class name="tests.TC2_TestCaseDeleteAllProducts"/>
 <!--            <class name="tests.DemoSeleniumGrid"/>-->
 <!--            <class name="tests.DemoSauceLabs"/>-->
-<!--            <class name="tests.TC3_TestCaseCorrectProducts"/>-->
-<!--            <class name="tests.TC4_TestCaseDeleteAddress"/>-->
+            <class name="tests.TC3_TestCaseCorrectProducts"/>
+            <class name="tests.TC4_TestCaseDeleteAddress"/>
             <class name="tests.TC5_TestCaseChangeToEWalletPage"/>
         </classes>
     </test>

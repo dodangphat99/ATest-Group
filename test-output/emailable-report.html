@@ -25,42 +25,26 @@ td,th {border:1px solid #009;padding:.25em .5em}
 <body>
 <table cellspacing="0" cellpadding="0" class="testOverview">
 <tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em"><a href="#t1">LAZADA smoke test</a></td><td class="numi">0</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">29.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">LAZADA smoke test</a></td><td class="numi">5</td><td class="numi">5</td><td class="numi">0</td><td class="numi">0</td><td class="numi">119.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr id="t1"><th colspan="5">LAZADA smoke test &#8212; failed</th></tr>
-<tr class="failedodd"><td>tests.TC5_TestCaseChangeToEWalletPage</td><td><a href="#m1"><b>testCaseChangeToEWalletPage</b>  </a></td><td class="numi">1</td><td>1638436481192</td><td class="numi">22821</td></tr>
+<tr id="t1"><th colspan="5">LAZADA smoke test &#8212; passed</th></tr>
+<tr class="passedodd"><td>tests.TC3_TestCaseCorrectProducts</td><td><a href="#m1"><b>testCaseCorrectProducts</b>  </a></td><td class="numi">1</td><td>1638440884264</td><td class="numi">26454</td></tr>
+<tr class="passedeven"><td>tests.TC4_TestCaseDeleteAddress</td><td><a href="#m2"><b>testCaseDeleteAddress</b>  </a></td><td class="numi">1</td><td>1638440884656</td><td class="numi">54121</td></tr>
+<tr class="passedodd"><td>tests.TC2_TestCaseDeleteAllProducts</td><td><a href="#m3"><b>testCaseDeleteAllProducts</b>  </a></td><td class="numi">1</td><td>1638440887919</td><td class="numi">104878</td></tr>
+<tr class="passedeven"><td>tests.TC1_TestCaseRegister</td><td><a href="#m4"><b>testCaseRegister</b>  </a></td><td class="numi">1</td><td>1638440888318</td><td class="numi">58115</td></tr>
+<tr class="passedodd"><td>tests.TC5_TestCaseChangeToEWalletPage</td><td><a href="#m5"><b>testCaseChangeToEWalletPage</b>  </a></td><td class="numi">1</td><td>1638440889015</td><td class="numi">44516</td></tr>
 </table>
 <h1>LAZADA smoke test</h1>
-<h2 id="m1">tests.TC5_TestCaseChangeToEWalletPage:testCaseChangeToEWalletPage</h2>
-<div>
-<div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[contains(.,&apos; THANH TOÃ�N &apos;)]&quot;}
-  (Session info: chrome=96.0.4664.45)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
-System info: host: &apos;DESKTOP-UV0B87D&apos;, ip: &apos;192.168.1.2&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a97505692559937e32807c23fd62398d, findElement {using=xpath, value=//button[contains(.,&apos; THANH TOÃ�N &apos;)]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\PC\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:57790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57790/devtoo..., se:cdpVersion: 96.0.4664.45, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a97505692559937e32807c23fd62398d
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
-	at pages.CartPage.clickPaymentButton(CartPage.java:48)
-	at tests.TC5_TestCaseChangeToEWalletPage.testCaseChangeToEWalletPage(TC5_TestCaseChangeToEWalletPage.java:27)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 15 stack frames</div>
-</div>
+<h2 id="m1">tests.TC2_TestCaseDeleteAllProducts:testCaseDeleteAllProducts</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">tests.TC4_TestCaseDeleteAddress:testCaseDeleteAddress</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">tests.TC3_TestCaseCorrectProducts:testCaseCorrectProducts</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">tests.TC5_TestCaseChangeToEWalletPage:testCaseChangeToEWalletPage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">tests.TC1_TestCaseRegister:testCaseRegister</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
