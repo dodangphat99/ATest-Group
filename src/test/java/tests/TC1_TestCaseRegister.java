@@ -13,7 +13,7 @@ import reports.TestCamera;
 
 import java.io.IOException;
 
-public class TestCaseRegister extends BaseTest {
+public class TC1_TestCaseRegister extends BaseTest {
     private static HomePage hp = new HomePage();
     private static RegisterPage rp = new RegisterPage();
     private static LoginPage lp = new LoginPage();
@@ -38,12 +38,12 @@ public class TestCaseRegister extends BaseTest {
         SoftAssertion.assertEqual("https://fumart.vn/cart","Switch to Cart Screen Successfully","Switch to Cart Screen Failed");
         HtmlLog.stepInfo("Keep Buy Product Test");
         cp.clickKeepBuyProduct();
-        //SoftAssertion.assertEqual("https://fumart.vn/san-pham","Keep Buy Product Successfully","Keep Buy Product Failed");
+        SoftAssertion.assertEqual("https://fumart.vn/san-pham","Keep Buy Product Successfully","Keep Buy Product Failed");
 
-        String failClickKeepBuyProduct = "Failed" + SoftAssertion.formatFailMessage("abc","xyz")
-                +"&emsp;&emsp;&emsp;&emsp;"
-                +GlobalVariable.getLogger().addScreenCaptureFromPath(TestCamera.captureScreen());
-        ReportHelper.logFail(failClickKeepBuyProduct);
+//        String failClickKeepBuyProduct = "Failed" + SoftAssertion.formatFailMessage("abc","xyz")
+//                +"&emsp;&emsp;&emsp;&emsp;"
+//                +GlobalVariable.getLogger().addScreenCaptureFromPath(TestCamera.captureScreen());
+//        ReportHelper.logFail(failClickKeepBuyProduct);
 
         HtmlLog.stepInfo("Search Test");
         sp.search(getTestUserSearch());

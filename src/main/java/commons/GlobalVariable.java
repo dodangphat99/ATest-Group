@@ -13,15 +13,14 @@ public class GlobalVariable {
     private static ThreadLocal<ExtentTest> logger = new ThreadLocal<>();
     private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    public static  void setDriver() {
+    public static void setDriver() {
         WebDriverManager.chromedriver().setup();
-        if(driver.get()==null) {
+        if (driver.get() == null) {
             driver.set(new ChromeDriver());
         }
     }
 
-    public static WebDriver getDriver()
-    {
+    public static WebDriver getDriver() {
         return driver.get();
     }
 
@@ -30,7 +29,7 @@ public class GlobalVariable {
     }
 
     public static void setLogger(ExtentTest test) {
-        if(logger.get()==null) {
+        if (logger.get() == null) {
             logger.set(test);
         }
     }

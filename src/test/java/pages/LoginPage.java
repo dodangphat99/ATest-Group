@@ -21,7 +21,6 @@ public class LoginPage extends BasePage{
     private By loginButton = By.xpath("//button[@class='btn btn-primary block' and @type='submit']");
 
     public void login(User user){
-        System.out.print(user);
         GlobalVariable.getDriver().findElement(fieldUserName).sendKeys(user.getUserName());
         GlobalVariable.getDriver().findElement(fieldPassword).sendKeys(user.getPassword());
         GlobalVariable.getDriver().findElement(loginButton).click();

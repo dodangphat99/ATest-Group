@@ -1,11 +1,32 @@
-[{
-  "fullName": "do dang phat",
-  "phoneNumber": "0971999995",
-  "email": "khoaprotk196@gmail.com",
-  "referralCode": "",
-  "password": "1234567",
-  "newPassword": "1234567",
-  "confirmPassword":"1234567",
-  "userName": "khoaprotk196@gmail.com",
-  "search": "bot giat"
-}]
+[
+  {
+    "fullName": "do dang phat",
+    "phoneNumber": "0774111120",
+    "email": "khoaprotk29994@gmail.com",
+    "referralCode": "",
+    "password": "1234567",
+    "newPassword": "1234567",
+    "confirmPassword": "1234567",
+    "userName": "khoaprotk29994@gmail.com",
+    "search": "bot giat"
+  },
+  {
+    "userName": "khoaprotk190@gmail.com",
+    "password": "dodangphat26"
+  },
+  {
+    "userName": "khoaprotk192@gmail.com",
+    "password": "1234567",
+    "search": "bot giat"
+  },
+  {
+    "userName": "khoaprotk193@gmail.com",
+    "password": "1234567",
+    "address": "59 Nam Cao, Quan Lien Chieu, Da Nang"
+  },
+  {
+    "userName": "khoaprotk194@gmail.com",
+    "password": "1234567",
+    "address": "59 Nam Cao, Quan Lien Chieu, Da Nang"
+  }
+]

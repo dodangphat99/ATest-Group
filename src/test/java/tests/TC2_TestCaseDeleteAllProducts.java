@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 import pages.*;
 import reports.HtmlLog;
 
-public class TestCaseDeleteAllProducts extends BaseTest{
+public class TC2_TestCaseDeleteAllProducts extends BaseTest{
     private static HomePage hp = new HomePage();
     private static RegisterPage rp = new RegisterPage();
     private static LoginPage lp = new LoginPage();
@@ -38,9 +38,9 @@ public class TestCaseDeleteAllProducts extends BaseTest{
 
     private static User getTestUserLogin(){
         User user = new User();
-        jh.JsonUserLogin();
-        user.setUserName(jh.getUsers().get(0).getUserName());
-        user.setPassword(jh.getUsers().get(0).getPassword());
+        jh.JsonUser();
+        user.setUserName(jh.getUsers().get(1).getUserName());
+        user.setPassword(jh.getUsers().get(1).getPassword());
         return user;
     }
 }
