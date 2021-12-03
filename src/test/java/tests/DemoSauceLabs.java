@@ -51,33 +51,4 @@ public class DemoSauceLabs {
         driver.quit();
         System.out.print("End.");
     }
-
-//    @BeforeMethod
-//    public static WebDriver createDriver() {
-//        // Should probably validate the arguments here
-//        try {
-//            DesiredCapabilities capabilities = new DesiredCapabilities();
-//            capabilities.setCapability(CapabilityType.BROWSER_NAME, browserName);
-//            capabilities.setCapability(CapabilityType.VERSION, browserVersion);
-//            capabilities.setCapability(CapabilityType.PLATFORM, platformName);
-//            return new RemoteWebDriver(new URL("https://" + sauceUser + ":" + sauceKey + "@ondemand.saucelabs.com:443/wd/hub"),
-//                    capabilities);
-//        } catch (MalformedURLException e) {
-//            throw new RuntimeException("Failure forming the URL to create a web driver", e);
-//        }
-//    }
-//
-//    @Test
-//    public void main() {
-//        WebDriver driver = createDriver();
-//        try {
-//            // simple output to see the thread for each test method instance
-//            System.out.println("starting test in thread: " + Thread.currentThread().getName());
-//            // Putting this in a try catch block because you want to be sure to close the driver to free
-//            // up the resources even if the test fails
-//            driver.get("https://www.google.com");
-//        } finally {
-//            driver.quit();
-//        }
-//    }
 }
