@@ -17,8 +17,8 @@ public class CartPage extends BasePage {
     private By deleteButton = By.xpath("//div[@class=\"text-right\"]/button[@class='btn btn-outline-danger']");
     private By spinner = By.xpath("//*[@class=\"spinner\"]");
     //    private By continueBuyButton = By.xpath("//*[@id=\"main-layout\"]/section/div[2]/div/div[1]/div[2]/button[1]");
-//    private By paymentButton = By.xpath("//div[@class='row']/div[2]/div/div/button[@class='btn btn-primary w-100 mt-4']");
-    private By paymentButton = By.xpath("//button[contains(.,' THANH TOÁN ')]");
+    private By paymentButton = By.xpath("//div[@class='row']/div[2]/div/div/button[@class='btn btn-primary w-100 mt-4']");
+    //private By paymentButton = By.xpath("//button[contains(.,' THANH TOÁN ')]");
     private By backButton = By.xpath("//div[@class='mt-5 d-flex']/a");
 //    private By modal = By.xpath("//div[@id='vueConfirm']/div/span/p");
     private By acceptButton = By.xpath("//div[@id='vueConfirm']/div/div/button[@class='vc-btn']");
