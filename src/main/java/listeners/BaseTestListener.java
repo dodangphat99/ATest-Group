@@ -40,6 +40,7 @@ public class BaseTestListener implements ITestListener {
             e.printStackTrace();
         }
         ReportHelper.logFail(failClickKeepBuyProduct);
+        GlobalVariable.getDriver().quit();
     }
 
     @Override

@@ -15,9 +15,8 @@ public class GlobalVariable {
 
     public static void setDriver() {
         WebDriverManager.chromedriver().setup();
-        if (driver.get() == null) {
-            driver.set(new ChromeDriver());
-        }
+        driver.set(new ChromeDriver());
+        driver.get().manage().window().maximize();
     }
 
     public static WebDriver getDriver() {
@@ -29,9 +28,7 @@ public class GlobalVariable {
     }
 
     public static void setLogger(ExtentTest test) {
-        if (logger.get() == null) {
-            logger.set(test);
-        }
+        logger.set(test);
     }
 
     @Getter
